@@ -4,7 +4,7 @@ import CheckoutForm from "./components/CheckoutForm";
 import CheckoutPaymentForm from "./components/CheckoutPaymentForm";
 
 function Checkout() {
-	const [showCheckoutForm, setShowCheckoutForm] = useState(false);
+	const [showCheckoutForm, setShowCheckoutForm] = useState(true);
 	return (
 		<div>
 			{showCheckoutForm ? (
