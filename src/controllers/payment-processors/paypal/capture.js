@@ -2,10 +2,8 @@ const { NextResponse } = require("next/server");
 import paypal from "@paypal/checkout-server-sdk";
 
 // Creating an environment
-let clientId =
-	"ATLp1SpNhVML05Zd1fYmp7rnWlla-wSKnMT8Zsc_8GJsSBFIvUYMffRX9VZ6rkKtkqSHQIAlmX_Lm21A";
-let clientSecret =
-	"EJX0VVbNcJtXLU36I46rm052oAlKuL7IchF39UfpJT2pFWtHuFNeqJbHnjsfzUZMlCiySO8bhGxgt0Xp";
+let clientId = process.env.PAYPAL_CLIENT_ID;
+let clientSecret = process.env.PAYPAL_CLIENT_SECRET;
 
 let environment = new paypal.core.SandboxEnvironment(clientId, clientSecret);
 let client = new paypal.core.PayPalHttpClient(environment);

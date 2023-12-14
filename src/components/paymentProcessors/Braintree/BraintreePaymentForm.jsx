@@ -32,7 +32,7 @@ export default function BraintreePaymentForm({ active }) {
 						<div>
 							<PayPalScriptProvider
 								options={{
-									clientId: "test",
+									clientId: process.env.BRAINTREE_CLIENT_ID,
 									components: "buttons",
 									// dataUserIdToken: "your-tokenization-key-here",
 									dataClientToken: clientToken,
