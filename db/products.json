@@ -1,0 +1,54 @@
+[
+	{
+		"id": "product-one",
+		"name": "SLIM FIT PLASTIC COAT",
+		"description": "60% combed ringspun cotton/40% polyester jersey tee.",
+		"options": {
+			"color": ["white", "black"],
+			"size": ["XS", "S", "M", "L", "XL", "XXL", "XXXL"]
+		},
+		"picture": "https://voxo-next-reactpixelstrap.vercel.app/assets/images/fashion/product/front/1.jpg",
+		"price": 120,
+		"currency": "USD",
+		"category": "hoodie"
+	},
+	{
+		"id": "product-two",
+		"name": "MILITARY BALL NIGHT DRESS",
+		"picture": "https://voxo-next-reactpixelstrap.vercel.app/assets/images/fashion/product/front/4.jpg",
+		"description": "60% combed ringspun cotton/40% polyester jersey tee.",
+		"options": {
+			"color": ["white", "black"],
+			"size": ["XS", "S", "M", "L", "XL", "XXL", "XXXL"]
+		},
+		"price": 85,
+		"currency": "USD",
+		"category": "hoodie"
+	},
+	{
+		"id": "product-three",
+		"name": "MILITARY BALL NIGHT",
+		"description": "60% combed ringspun cotton/40% polyester jersey tee.",
+		"options": {
+			"color": ["white", "black"],
+			"size": ["XS", "S", "M", "L", "XL", "XXL", "XXXL"]
+		},
+		"picture": "https://voxo-next-reactpixelstrap.vercel.app/assets/images/fashion/product/front/2.jpg",
+		"price": 120,
+		"currency": "USD",
+		"category": "hoodie"
+	},
+	{
+		"id": "product-four",
+		"name": "BLUE JACKET",
+		"picture": "https://voxo-next-reactpixelstrap.vercel.app/assets/images/fashion/product/front/3.jpg",
+		"description": "60% combed ringspun cotton/40% polyester jersey tee.",
+		"options": {
+			"color": ["white", "black"],
+			"size": ["XS", "S", "M", "L", "XL", "XXL", "XXXL"]
+		},
+		"price": 85,
+		"currency": "USD",
+		"category": "hoodie"
+	}
+]
