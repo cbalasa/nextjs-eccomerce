@@ -15,7 +15,7 @@ This is an online shop created with NextJs that uses three payment processors: S
 
 ```
 
-3. Add the following env variables to your `.env.development` file
+4. Add the following env variables to your `.env.development` file
 
 ```bash
   NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
@@ -26,7 +26,7 @@ This is an online shop created with NextJs that uses three payment processors: S
   BRAINTREE_CLIENT_ID
 ```
 
-4. Start project on local machine:
+5. Start project on local machine:
 
 ```bash
    npm run dev
