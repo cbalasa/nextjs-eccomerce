@@ -12,6 +12,7 @@ export default function StripePaymentForm({ active }) {
 		<>
 			{active && (
 				<Elements stripe={stripePromise}>
+					<span>Fill in payment details</span>
 					<PaymentForm />
 				</Elements>
 			)}

@@ -5,7 +5,7 @@ import { services } from "@/services";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
 function PaypalPaymentMethod({ active }) {
-	const { order } = useOrder();
+	const { order, updateOrderToPaid } = useOrder();
 
 	const createOrder = async () => {
 		const res = await services.paymentProcessors.paypal.capture({
@@ -19,9 +19,10 @@ function PaypalPaymentMethod({ active }) {
 		console.log("Cancelled:", data);
 	};
 
-	const approve = (data, actions) => {
+	const approve = async (data, actions) => {
 		console.log("Approved:", data);
-		actions.order.capture();
+		await actions.order.capture();
+		await updateOrderToPaid();
 	};
 	return (
 		<>

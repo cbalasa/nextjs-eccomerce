@@ -13,7 +13,7 @@ const PaymentForm = ({ currency }) => {
 	const [{ options }, dispatch] = usePayPalScriptReducer();
 	const style = { label: "paypal", layout: "vertical" };
 
-	const { order } = useOrder();
+	const { order, updateOrderToPaid } = useOrder();
 	useEffect(() => {
 		dispatch({
 			type: "resetOptions",
@@ -51,19 +51,29 @@ const PaymentForm = ({ currency }) => {
 	};
 
 	const onApprove = async (data, actions) => {
-		return actions.braintree.tokenizePayment(data).then((payload) => {
-			// Your code here after capture the order
-			console.log(JSON.stringify(payload));
-		});
+		try {
+			const payload = await actions.braintree.tokenizePayment(data);
+
+			//do something with payload if needed
+
+			//then
+			await updateOrderToPaid();
+		} catch (error) {
+			throw error;
+		}
 	};
 	return (
-		<BraintreePayPalButtons
-			style={style}
-			disabled={false}
-			forceReRender={[style, order.total]}
-			createOrder={createOrder}
-			onApprove={onApprove}
-		/>
+		<>
+			{order && (
+				<BraintreePayPalButtons
+					style={style}
+					disabled={false}
+					forceReRender={[style, order.total]}
+					createOrder={createOrder}
+					onApprove={onApprove}
+				/>
+			)}
+		</>
 	);
 };
 
