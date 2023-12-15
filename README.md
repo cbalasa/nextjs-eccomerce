@@ -5,7 +5,10 @@ This is an online shop created with NextJs that uses three payment processors: S
 ## Start on local
 
 1. Clone the repo
-2. Install packages:
+
+2. Make sure to use the node version stipulated in `.nvmrc`
+
+3. Install packages:
 
 ```bash
    npm i
