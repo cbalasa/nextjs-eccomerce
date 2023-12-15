@@ -1,7 +1,6 @@
 "use client";
 import Hero from "@/components/Hero/Hero";
 import Product from "@/components/Product/Product";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 

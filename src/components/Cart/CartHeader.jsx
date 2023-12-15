@@ -15,7 +15,7 @@ function CartHeader() {
 		>
 			<Image src={shoppingCart} alt="shopping cart" width={16} height={16} />
 			<span className="absolute -top-1 text-xs -right-2 px-1.5 bg-blue-500 text-white font-medium rounded-md">
-				{cart?.products?.length ?? 0}
+				{cart?.products?.length}
 			</span>
 		</div>
 	);
